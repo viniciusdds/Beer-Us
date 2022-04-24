@@ -3,10 +3,9 @@ part of 'app_pages.dart';
 abstract class Routes {
   Routes._();
 
-  static const INITIAL = _Paths.SPLASH;
+  static const INITIAL = SPLASH;
+  static const SPLASH = '/on-boarding/splash';
+  static const INFORMATION = '/on-boarding/information';
+  static const HOME = '/home';
 }
 
-abstract class _Paths {
-  static const HOME = '/home';
-  static const SPLASH = '/on-boarding/splash';
-}

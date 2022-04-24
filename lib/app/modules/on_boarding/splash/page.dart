@@ -2,6 +2,8 @@ import 'package:beerus/app/modules/on_boarding/splash/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+//Aula 07 14:30 minutos
+
 class SplashPage extends GetView<SplashController> {
   @override
   Widget build(BuildContext context) {
@@ -9,26 +11,25 @@ class SplashPage extends GetView<SplashController> {
       body: Container(
         width: Get.width,
         height: Get.height,
-        color: Color(0xffffefa0),
+        color: Color(0xffFFB319),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               width: 232.25,
-              height: 249,
+              height: 170,
               margin: EdgeInsets.symmetric(vertical: 100),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
               ),
-              child: Image.asset('assets/images/beerus-logo.png'),
+              child: Image.asset('assets/images/logos/logo.png'),
             ),
             Expanded(child: Container()),
             Container(
-              width: 73.02,
-              height: 77,
+              width: 99,
               margin: EdgeInsets.symmetric(vertical: 100),
-              child: Image.asset('assets/images/barrel.png'),
+              child: Image.asset('assets/images/icons/torneira.png'),
             )
           ],
         ),
