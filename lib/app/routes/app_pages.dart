@@ -1,5 +1,5 @@
-import 'package:beerus/app/modules/home/bindings/home_binding.dart';
-import 'package:beerus/app/modules/home/views/home_view.dart';
+import 'package:beerus/app/modules/on_boarding/home/binding.dart';
+import 'package:beerus/app/modules/on_boarding/home/page.dart';
 import 'package:beerus/app/modules/on_boarding/information/binding.dart';
 import 'package:beerus/app/modules/on_boarding/information/page.dart';
 import 'package:beerus/app/modules/on_boarding/splash/binding.dart';
@@ -21,7 +21,7 @@ class AppPages {
     ),
     GetPage(
       name: Routes.HOME,
-      page: () => HomeView(),
+      page: () => HomePage(),
       binding: HomeBinding()
     ),
     GetPage(

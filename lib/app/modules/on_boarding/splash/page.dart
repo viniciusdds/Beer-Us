@@ -2,8 +2,6 @@ import 'package:beerus/app/modules/on_boarding/splash/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-//Aula 07 14:30 minutos
-
 class SplashPage extends GetView<SplashController> {
   @override
   Widget build(BuildContext context) {
