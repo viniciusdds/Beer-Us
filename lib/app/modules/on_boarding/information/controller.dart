@@ -1,6 +1,7 @@
 import 'package:beerus/app/modules/on_boarding/information/models/slide_model.dart';
 import 'package:beerus/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 class OnboardingInformationController extends GetxController {
@@ -24,6 +25,16 @@ class OnboardingInformationController extends GetxController {
         assetImage: "assets/images/slides/slide3.png"
     ),
   ];
+
+  @override
+  void onInit() {
+    super.onInit();
+
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+  }
 
   @override
   void onClose() {

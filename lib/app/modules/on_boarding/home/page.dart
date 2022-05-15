@@ -17,7 +17,7 @@ class HomePage extends GetView<HomeController>{
               elevation: 0,
             ),
             body: Container(
-                width: Get.width,
+                width: double.infinity,
                 height: Get.height,
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,

@@ -1,3 +1,4 @@
+import 'package:beerus/app/global/components/button_rounded.dart';
 import 'package:beerus/app/global/components/text_input.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,25 +22,75 @@ class SignInPage extends GetView<SignInController>{
             ),
             body: Container(
                 padding: EdgeInsets.symmetric(horizontal: 20),
-                width: Get.width,
+                width: double.infinity,
                 height: Get.height,
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                              "Entrar",
+                        Text(
+                            "Entrar",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 24,
+                                letterSpacing: 1.20
+                            ),
+                        ),
+                        SizedBox(height: Get.width * 0.1),
+                        BeerUsTextInput(
+                          icon: Icon(Icons.mail),
+                          text: "e-mail",
+                          //controller: ,
+                        ),
+                        BeerUsTextInput(
+                          icon: Icon(Icons.lock),
+                          text: "senha",
+                          onShowPassword: (){},
+                        ),
+                        Container(
+                          width: Get.width,
+                          padding: EdgeInsets.all(10),
+                          child: InkWell(
+                            onTap: (){},
+                            child: Text(
+                              "esqueceu a senha?",
+                              textAlign: TextAlign.right,
                               style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 24,
-                                  letterSpacing: 1.20
+                                color: Colors.black,
+                                fontSize: 18,
+                                letterSpacing: 0.90,
                               ),
+                            ),
                           ),
                         ),
-                        BeerUsTextInput(),
-                        BeerUsTextInput(),
+                      SizedBox(height: Get.width * 0.1),
+                        BeerUsButtonRounded(
+                            name: "Acessar",
+                        ),
+                        SizedBox(height: Get.width * 0.1),
+                        Text(
+                          "Não sabe o que fazer?",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 18,
+                            letterSpacing: 0.90
+                          ),
+                        ),
+                        SizedBox(height: 5),
+                        InkWell(
+                          onTap: (){},
+                          child: Text(
+                            "cadastre-se",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 18,
+                              letterSpacing: 0.90,
+                            ),
+                          ),
+                        ),
+                      SizedBox(height: Get.width * 0.1),
+                        Image.asset("assets/images/icons/trigo.png"),
+                      SizedBox(height: Get.width * 0.1),
                     ],
                 ),
             )

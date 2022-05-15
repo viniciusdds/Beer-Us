@@ -2,10 +2,22 @@ import 'package:flutter/material.dart';
 
 class BeerUsTextInput extends Container {
 
+  final Widget? icon;
+  final String text;
+  final Function()? onShowPassword;
+  final TextEditingController? controller;
+
+  BeerUsTextInput({
+    required this.text,
+    this.icon,
+    this.onShowPassword,
+    this.controller
+  });
+
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.all(10),
+        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         padding: EdgeInsets.symmetric(horizontal: 15),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(4),
@@ -13,16 +25,16 @@ class BeerUsTextInput extends Container {
         ),
         child: Row(
           children: [
-            Icon(Icons.mail_outline),
+            icon!,
             Expanded(
               child: TextFormField(
-                //controller: ,
+                controller: controller,
                 textAlign: TextAlign.center,
                 validator: (str){
                   return null;
                 },
                 decoration: InputDecoration(
-                    hintText: "E-mail",
+                    hintText: "${text}",
                     helperStyle: TextStyle(
                         color: Colors.black,
                         fontSize: 18,
@@ -32,11 +44,10 @@ class BeerUsTextInput extends Container {
                 ),
               ),
             ),
-            SizedBox(width: 10),
-            InkWell(
-              onTap: (){},
+            onShowPassword != null ? InkWell(
+              onTap: onShowPassword,
               child: Icon(Icons.remove_red_eye_outlined),
-            ),
+            ) : Container(),
           ],
         )
     );
