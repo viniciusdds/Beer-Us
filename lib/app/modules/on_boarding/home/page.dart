@@ -27,15 +27,11 @@ class HomePage extends GetView<HomeController>{
                       SizedBox(height: Get.width * 0.3),
                       BeerUsButtonRounded(
                         name: "Entrar",
-                        onTap: (){
-                          print("Entrar");
-                        },
+                        onTap: () => controller.onClickButtonSignIn(),
                       ),
                       BeerUsButtonRounded(
                         name: "Registrar",
-                        onTap: (){
-                          print("Registrar");
-                        },
+                        onTap: () => controller.onClickButtonSignUp(),
                       ),
                     ],
                 ),
